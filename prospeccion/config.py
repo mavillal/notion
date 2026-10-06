@@ -73,7 +73,7 @@ SECTORES = {
 CATEGORIAS_EXCLUIDAS = [
     "mudanza", "tienda", "supermercado", "restaurante", "cafetería", "panadería",
     "carnicería", "hotel", "camping", "centro comercial", "gran superficie",
-    "ferretería", "atracción turística", "parque", "jardín", "condominio",
+    "ferretería", "atracción turística", "parque", "jardín", "jardiner", "condominio",
     "institución educativa", "recinto para eventos", "catering", "agencia de colocación",
 ]
 
