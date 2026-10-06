@@ -13,6 +13,8 @@ import json
 from collections import defaultdict
 from pathlib import Path
 
+from config import SECTORES
+
 EMPRESAS = Path("data/empresas.csv")
 PAGINAS = Path("data/paginas.json")
 SALIDA = Path("data/prospectos.csv")
@@ -42,7 +44,7 @@ GANCHOS = {  # preguntas de apertura (la web no prueba que no lo tengan: pregunt
                    "Un diagnóstico lean de 2 semanas suele encontrar ahorros rápidos.",
 }
 
-COLUMNAS = ["puntaje", "servicio_sugerido", "gancho", "nombre", "categoria_maps",
+COLUMNAS = ["puntaje", "sector", "servicio_sugerido", "gancho", "oportunidad_sector", "nombre", "categoria_maps",
             "comuna_busqueda", "direccion", "telefono", "emails", "web", "n_resenas",
             "rating", "brechas", "senales", "paginas_visitadas", "maps_url"]
 
@@ -107,7 +109,9 @@ def main() -> None:
         empresas = list(csv.DictReader(f, delimiter=";"))
     paginas = agrupar_paginas()
 
-    filas = [{**e, **evaluar(e, paginas.get(e["place_id"], []))} for e in empresas]
+    filas = [{**e, **evaluar(e, paginas.get(e["place_id"], [])),
+              "oportunidad_sector": SECTORES.get(e.get("sector", ""), {}).get("oportunidad", "")}
+             for e in empresas]
     filas.sort(key=lambda f: f["puntaje"], reverse=True)
 
     with SALIDA.open("w", newline="", encoding="utf-8-sig") as f:

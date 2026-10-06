@@ -6,6 +6,7 @@ Uso:
     python paso1_descubrir.py                     # todos los rubros x comunas (pide confirmación)
     python paso1_descubrir.py --rubros maestranza --comunas Quilpué "Villa Alemana"
     python paso1_descubrir.py --max-consultas 20  # tope de llamadas a la API
+    python paso1_descubrir.py --sectores          # usar las búsquedas de SECTORES en config.py
 
 Resultado: data/empresas.csv (se acumula entre ejecuciones, sin duplicados).
 """
@@ -20,7 +21,7 @@ from pathlib import Path
 import httpx
 from dotenv import load_dotenv
 
-from config import COMUNAS, FILTRO_REGION, RUBROS, ZONA
+from config import CATEGORIAS_EXCLUIDAS, COMUNAS, FILTRO_REGION, RUBROS, SECTORES, ZONA
 
 URL = "https://places.googleapis.com/v1/places:searchText"
 CAMPOS = ",".join([
@@ -30,7 +31,7 @@ CAMPOS = ",".join([
     "places.businessStatus", "places.googleMapsUri", "nextPageToken",
 ])
 SALIDA = Path("data/empresas.csv")
-COLUMNAS = ["place_id", "nombre", "rubro_busqueda", "categoria_maps", "direccion",
+COLUMNAS = ["place_id", "nombre", "sector", "rubro_busqueda", "categoria_maps", "direccion",
             "comuna_busqueda", "telefono", "web", "rating", "n_resenas", "maps_url"]
 
 
@@ -52,6 +53,11 @@ def buscar(cliente: httpx.Client, texto: str, paginas: int) -> tuple[list[dict],
             break
         time.sleep(1)
     return lugares, llamadas
+
+
+def excluida(categoria: str) -> bool:
+    c = categoria.lower()
+    return any(x in c for x in CATEGORIAS_EXCLUIDAS)
 
 
 def cargar_existentes() -> dict[str, dict]:
@@ -78,6 +84,8 @@ def main() -> None:
                     help="páginas de 20 resultados por búsqueda (más = más costo)")
     ap.add_argument("--max-consultas", type=int, default=100,
                     help="tope de llamadas a la API en esta ejecución")
+    ap.add_argument("--sectores", action="store_true",
+                    help="usar las búsquedas por sector definidas en config.py")
     ap.add_argument("-y", "--si", action="store_true", help="no pedir confirmación")
     args = ap.parse_args()
 
@@ -86,7 +94,10 @@ def main() -> None:
     if not clave:
         sys.exit("Falta GOOGLE_PLACES_API_KEY en el archivo .env (ver README).")
 
-    busquedas = [(r, c) for r in args.rubros for c in args.comunas]
+    if args.sectores:
+        busquedas = [(r, c, sector) for sector, d in SECTORES.items() for r, c in d["busquedas"]]
+    else:
+        busquedas = [(r, c, "") for r in args.rubros for c in args.comunas]
     print(f"{len(busquedas)} búsquedas x hasta {args.paginas} página(s). "
           f"Tope: {args.max_consultas} llamadas a la API.")
     if not args.si and input("¿Continuar? [s/N] ").strip().lower() != "s":
@@ -97,7 +108,7 @@ def main() -> None:
     headers = {"X-Goog-Api-Key": clave, "X-Goog-FieldMask": CAMPOS}
 
     with httpx.Client(headers=headers, timeout=30) as cliente:
-        for rubro, comuna in busquedas:
+        for rubro, comuna, sector in busquedas:
             if llamadas >= args.max_consultas:
                 print("Se alcanzó el tope de consultas.")
                 break
@@ -110,14 +121,17 @@ def main() -> None:
             nuevos = 0
             for p in lugares:
                 direccion = p.get("formattedAddress", "")
+                categoria = p.get("primaryTypeDisplayName", {}).get("text", "")
                 if (p.get("businessStatus", "OPERATIONAL") != "OPERATIONAL"
-                        or FILTRO_REGION not in direccion or p["id"] in empresas):
+                        or FILTRO_REGION not in direccion or p["id"] in empresas
+                        or excluida(categoria)):
                     continue
                 empresas[p["id"]] = {
                     "place_id": p["id"],
                     "nombre": p.get("displayName", {}).get("text", ""),
+                    "sector": sector,
                     "rubro_busqueda": rubro,
-                    "categoria_maps": p.get("primaryTypeDisplayName", {}).get("text", ""),
+                    "categoria_maps": categoria,
                     "direccion": direccion,
                     "comuna_busqueda": comuna,
                     "telefono": p.get("nationalPhoneNumber", ""),

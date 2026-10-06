@@ -30,6 +30,53 @@ RUBROS = [
     "empresa de mantención industrial",
 ]
 
+# Búsquedas por sector (se usan con: python paso1_descubrir.py --sectores).
+# Cada búsqueda es (rubro, lugar). La "oportunidad" se copia al Excel final.
+SECTORES = {
+    "Logística": {
+        "oportunidad": "Gestión de turnos, digitalización de hojas de ruta, SST por fatiga "
+                       "de conductores y riesgos en bodegaje.",
+        "busquedas": [
+            ("bodegas y almacenaje", "Valparaíso"),
+            ("bodegas y almacenaje", "Placilla, Valparaíso"),
+            ("centro de distribución", "Curauma, Valparaíso"),
+            ("servicios logísticos", "San Antonio"),
+            ("transporte de carga", "San Antonio"),
+            ("transporte de carga", "Concón"),
+        ],
+    },
+    "Manufactura": {
+        "oportunidad": "Automatización de reportes de planta, digitalización del layout, "
+                       "auditoría de matrices de riesgo e implementación DS 44 / Ley Karin.",
+        "busquedas": [
+            ("maquinaria industrial", "Viña del Mar"),
+            ("alimentos procesos", "Quilpué"),
+            ("alimentos procesos", "Villa Alemana"),
+            ("maestranza", "Concón"),
+            ("montajes industriales", "Región de Valparaíso"),
+        ],
+    },
+    "Agroindustria": {
+        "oportunidad": "Control de contratistas, cumplimiento sanitario/SST en temporada "
+                       "alta, digitalización de check-lists de calidad.",
+        "busquedas": [
+            ("frigoríficos", "Quillota"),
+            ("empacadoras", "San Felipe"),
+            ("empacadoras", "Los Andes"),
+            ("viñas", "Casablanca"),
+        ],
+    },
+}
+
+# Categorías de Google Maps que se descartan (no son el cliente objetivo).
+# Se compara en minúsculas y basta con que el texto esté contenido.
+CATEGORIAS_EXCLUIDAS = [
+    "mudanza", "tienda", "supermercado", "restaurante", "cafetería", "panadería",
+    "carnicería", "hotel", "camping", "centro comercial", "gran superficie",
+    "ferretería", "atracción turística", "parque", "jardín", "condominio",
+    "institución educativa", "recinto para eventos", "catering", "agencia de colocación",
+]
+
 # Solo se guardan resultados cuya dirección contenga este texto.
 FILTRO_REGION = "Valparaíso"
 
