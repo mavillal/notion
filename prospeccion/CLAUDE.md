@@ -5,8 +5,8 @@ español simple, mantén el código plano (scripts numerados, sin frameworks ext
 comentarios en español.
 
 - Objetivo: empresas industriales medianas de la V Región de Chile, con presencia en Google Maps.
-- Servicios a ofrecer: digitalización, mejora continua y cumplimiento legal SST (Ley 16.744,
-  DS 44, Ley Karin 21.643), además de otras oportunidades.
+- Servicios a ofrecer: cumplimiento legal SST (Ley 16.744, DS 44, Ley Karin 21.643) y mejora
+  continua. La digitalización está pausada a pedido del usuario: no agregarla sin que lo pida.
 - Pipeline: `paso1_descubrir.py` (Places API New) → `paso2_enriquecer.py` (Crawlee
   BeautifulSoupCrawler) → `paso3_puntuar.py` (puntaje). La configuración está en `config.py`.
   La lógica pura de análisis HTML está en `senales.py` (testeada en `test_senales.py`).

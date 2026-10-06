@@ -6,14 +6,12 @@ def test_solo_emails_genericos():
     assert emails_genericos(texto) == ["info@empresa.cl", "ventas@empresa.cl"]
 
 
-def test_detecta_senales_y_web():
-    html = """<html><head><meta name="viewport" content="x"></head><body>
-    <form></form> Certificación ISO 45001 y protocolo Ley Karin. Trabaja con nosotros.
-    © 2015-2019 Empresa</body></html>"""
+def test_detecta_senales():
+    html = """<html><body>Certificación ISO 45001 y protocolo Ley Karin.
+    Trabaja con nosotros. <a href="mailto:contacto@empresa.cl">x</a></body></html>"""
     r = analizar_pagina(html, "https://empresa.cl")
     assert {"sst_iso45001", "sst_ley_karin", "crecimiento_empleo"} <= set(r["senales"])
-    assert r["https"] and r["responsive"] and r["formulario"]
-    assert r["anio_copyright"] == 2019
+    assert r["emails"] == ["contacto@empresa.cl"]
 
 
 def test_links_mismo_dominio():

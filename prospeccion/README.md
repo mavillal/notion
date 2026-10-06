@@ -2,7 +2,7 @@
 
 Encuentra empresas industriales medianas de la V Región en Google Maps, analiza su web
 con [Crawlee](https://crawlee.dev/python/) y genera un Excel de prospectos con puntaje,
-servicio sugerido (Digitalización / Cumplimiento SST / Mejora continua) y una pregunta
+servicio sugerido (Cumplimiento SST / Mejora continua) y una pregunta
 de apertura para el primer contacto.
 
 ```
@@ -29,9 +29,10 @@ cp .env.example .env             # luego pega tu clave en .env
 5. Pégala en `.env`: `GOOGLE_PLACES_API_KEY=...`
 6. **Recomendado:** en **Facturación → Presupuestos**, crea una alerta (por ejemplo, de USD 20).
 
-**Costo:** cada llamada trae hasta 20 empresas. Como pedimos web y teléfono, se cobra la tarifa
-"Text Search Enterprise", hoy alrededor de USD 35 por cada 1.000 llamadas, con un cupo gratis mensual.
-Revisa los precios vigentes en la consola. El script tiene un tope (`--max-consultas`, 100 por defecto).
+**Costo:** Google cobra la API por llamada (cada llamada trae hasta 20 empresas). Como pedimos
+web y teléfono, aplica la tarifa "Text Search Enterprise": alrededor de USD 35 por 1.000 llamadas,
+**con 1.000 llamadas gratis al mes**. El barrido completo (~300 llamadas) cabe en el cupo gratis.
+Verifica los precios vigentes en la consola. El script tiene un tope (`--max-consultas`, 100 por defecto).
 
 ## 2. Uso
 
@@ -59,7 +60,6 @@ Abre `data/prospectos.csv` en Excel. Las empresas vienen ordenadas por puntaje.
 | Tamaño | 20+ y 100+ reseñas en Maps (indicio de tamaño) | 5 + 5 |
 | Momento | "Trabaja con nosotros" / está contratando | 15 |
 | Momento | Atiende minería o puertos (clientes exigentes en SST) | 10 |
-| Digitalización | Sin web propia / sin https / no responsive / web de hace 3+ años / sin formulario / sin ERP ni portal | 25 / 10 / 10 / 10 / 5 / 5 |
 | Cumplimiento SST | La web no menciona Ley Karin / no menciona gestión SST (ISO 45001, prevención, comité paritario) | 10 / 10 |
 | Mejora continua | No menciona ISO 9001, lean, 5S ni kaizen | 10 |
 
@@ -85,8 +85,9 @@ El servicio sugerido es la línea que acumula más puntos de brecha. Edita `PESO
 1. **Filtro de tamaño real:** cruzar por RUT con la nómina de empresas del SII (datos abiertos), que trae el tramo de ventas y el número de trabajadores.
 2. **Gancho con IA:** pasar el texto de la web a Claude para redactar un primer mensaje personalizado por empresa.
 3. **CRM en Notion:** subir `prospectos.csv` a una base de Notion con estados (contactado / reunión / propuesta).
-4. **Webs con JavaScript:** usar `PlaywrightCrawler` en lugar de `BeautifulSoupCrawler` para los sitios que lo requieran.
-5. **Re-crawl mensual:** alertar cuando una empresa publique ofertas de empleo o cambie su web.
+4. **Digitalización (pausado):** volver a agregar esta línea de servicio cuando se retome.
+5. **Webs con JavaScript:** usar `PlaywrightCrawler` en lugar de `BeautifulSoupCrawler` para los sitios que lo requieran.
+6. **Re-crawl mensual:** alertar cuando una empresa publique ofertas de empleo o cambie su web.
 
 ## Tests
 

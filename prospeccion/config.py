@@ -73,11 +73,6 @@ SENALES = {
     "ambiente_iso14001": [r"iso\s*14001"],
     "mejora_continua": [r"\blean\b", r"mejora continua", r"\b5s\b", r"kaizen",
                         r"six sigma"],
-    # Digitalización
-    "digital_erp": [r"\berp\b", r"\bsap\b", r"softland", r"defontana",
-                    r"\bodoo\b"],
-    "digital_portal": [r"portal (de )?(clientes|proveedores)", r"intranet",
-                       r"iniciar sesi[oó]n", r"seguimiento de (pedido|carga)"],
     # Contexto comercial
     "crecimiento_empleo": [r"trabaja con nosotros", r"[uú]nete a nuestro equipo",
                            r"ofertas? (de )?(empleo|trabajo)",

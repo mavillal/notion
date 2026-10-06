@@ -11,10 +11,7 @@ Ajusta los puntos en PESOS según lo que aprendas de las primeras reuniones.
 import csv
 import json
 from collections import defaultdict
-from datetime import date
 from pathlib import Path
-
-from config import DOMINIOS_NO_PROPIOS
 
 EMPRESAS = Path("data/empresas.csv")
 PAGINAS = Path("data/paginas.json")
@@ -25,9 +22,6 @@ PESOS = {
     "resenas_20": 5, "resenas_100": 5,
     # Contexto comercial
     "contratando": 15, "cliente_exigente": 10,
-    # Digitalización
-    "sin_web": 25, "sin_https": 10, "no_responsive": 10, "web_antigua": 10,
-    "sin_formulario": 5, "sin_sistemas": 5,
     # SST / cumplimiento
     "sin_ley_karin": 10, "sin_gestion_sst": 10,
     # Mejora continua
@@ -35,9 +29,6 @@ PESOS = {
 }
 
 LINEA = {  # a qué servicio apunta cada brecha
-    "sin_web": "Digitalización", "sin_https": "Digitalización",
-    "no_responsive": "Digitalización", "web_antigua": "Digitalización",
-    "sin_formulario": "Digitalización", "sin_sistemas": "Digitalización",
     "sin_ley_karin": "Cumplimiento SST", "sin_gestion_sst": "Cumplimiento SST",
     "sin_calidad": "Mejora continua",
 }
@@ -49,11 +40,6 @@ GANCHOS = {  # preguntas de apertura (la web no prueba que no lo tengan: pregunt
                        "(matriz de riesgos, programa preventivo)?",
     "sin_calidad": "¿Tienen indicadores de productividad o pérdidas en planta? "
                    "Un diagnóstico lean de 2 semanas suele encontrar ahorros rápidos.",
-    "sin_web": "Encontramos su empresa en Google Maps pero sin sitio web: "
-               "hoy los clientes industriales evalúan proveedores online.",
-    "no_responsive": "Su sitio no se adapta a celulares, desde donde llega gran parte de las visitas.",
-    "web_antigua": "Su sitio parece no actualizarse hace años; ¿lo usan para captar clientes?",
-    "sin_https": "Su sitio no usa conexión segura (https) y los navegadores lo marcan como 'no seguro'.",
 }
 
 COLUMNAS = ["puntaje", "servicio_sugerido", "gancho", "nombre", "categoria_maps",
@@ -87,23 +73,8 @@ def evaluar(empresa: dict, paginas: list[dict]) -> dict:
     if tiene("cliente_mineria") or tiene("cliente_portuario"):
         puntos["cliente_exigente"] = PESOS["cliente_exigente"]
 
-    web = empresa.get("web", "")
     brechas = []
-    if not web or any(d in web.lower() for d in DOMINIOS_NO_PROPIOS):
-        brechas.append("sin_web")
-    elif inicio:  # solo evaluamos la web si se pudo visitar
-        if not inicio["https"]:
-            brechas.append("sin_https")
-        if not inicio["responsive"]:
-            brechas.append("no_responsive")
-        anio = max((p["anio_copyright"] or 0 for p in ok), default=0)
-        if anio and anio <= date.today().year - 3:
-            brechas.append("web_antigua")
-        if not any(p["formulario"] for p in ok):
-            brechas.append("sin_formulario")
-        if not (tiene("digital_erp") or tiene("digital_portal")):
-            brechas.append("sin_sistemas")
-    if inicio:  # sin web no hay evidencia de brechas SST/calidad
+    if inicio:  # sin web visitada no hay evidencia de brechas
         if not tiene("sst_ley_karin"):
             brechas.append("sin_ley_karin")
         if not (tiene("sst_iso45001") or tiene("sst_prevencion") or tiene("sst_comite_paritario")):
