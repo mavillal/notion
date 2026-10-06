@@ -21,7 +21,7 @@ from pathlib import Path
 import httpx
 from dotenv import load_dotenv
 
-from config import CATEGORIAS_EXCLUIDAS, COMUNAS, FILTRO_REGION, RUBROS, SECTORES, ZONA
+from config import CATEGORIAS_EXCLUIDAS, NOMBRES_EXCLUIDOS, COMUNAS, FILTRO_UBICACION, RUBROS, SECTORES, ZONA
 
 URL = "https://places.googleapis.com/v1/places:searchText"
 CAMPOS = ",".join([
@@ -31,6 +31,7 @@ CAMPOS = ",".join([
     "places.businessStatus", "places.googleMapsUri", "nextPageToken",
 ])
 SALIDA = Path("data/empresas.csv")
+HECHAS = Path("data/busquedas_hechas.txt")  # para no repetir (ni pagar) la misma búsqueda
 COLUMNAS = ["place_id", "nombre", "sector", "rubro_busqueda", "categoria_maps", "direccion",
             "comuna_busqueda", "telefono", "web", "rating", "n_resenas", "maps_url"]
 
@@ -55,9 +56,9 @@ def buscar(cliente: httpx.Client, texto: str, paginas: int) -> tuple[list[dict],
     return lugares, llamadas
 
 
-def excluida(categoria: str) -> bool:
-    c = categoria.lower()
-    return any(x in c for x in CATEGORIAS_EXCLUIDAS)
+def excluida(categoria: str, nombre: str = "") -> bool:
+    c, n = categoria.lower(), nombre.lower()
+    return any(x in c for x in CATEGORIAS_EXCLUIDAS) or any(x in n for x in NOMBRES_EXCLUIDOS)
 
 
 def cargar_existentes() -> dict[str, dict]:
@@ -86,6 +87,8 @@ def main() -> None:
                     help="tope de llamadas a la API en esta ejecución")
     ap.add_argument("--sectores", action="store_true",
                     help="usar las búsquedas por sector definidas en config.py")
+    ap.add_argument("--repetir", action="store_true",
+                    help="volver a ejecutar búsquedas ya hechas")
     ap.add_argument("-y", "--si", action="store_true", help="no pedir confirmación")
     args = ap.parse_args()
 
@@ -95,10 +98,14 @@ def main() -> None:
         sys.exit("Falta GOOGLE_PLACES_API_KEY en el archivo .env (ver README).")
 
     if args.sectores:
-        busquedas = [(r, c, sector) for sector, d in SECTORES.items() for r, c in d["busquedas"]]
+        busquedas = [(r, c, sector) for sector, d in SECTORES.items()
+                     for r, lugares in d["busquedas"] for c in lugares]
     else:
         busquedas = [(r, c, "") for r in args.rubros for c in args.comunas]
-    print(f"{len(busquedas)} búsquedas x hasta {args.paginas} página(s). "
+    hechas = set(HECHAS.read_text(encoding="utf-8").splitlines()) if HECHAS.exists() else set()
+    if not args.repetir:
+        busquedas = [b for b in busquedas if f"{b[0]} | {b[1]}" not in hechas]
+    print(f"{len(busquedas)} búsquedas nuevas x hasta {args.paginas} página(s). "
           f"Tope: {args.max_consultas} llamadas a la API.")
     if not args.si and input("¿Continuar? [s/N] ").strip().lower() != "s":
         return
@@ -116,6 +123,11 @@ def main() -> None:
             try:
                 lugares, n = buscar(cliente, f"{rubro} en {comuna}, Chile", paginas)
             except httpx.HTTPStatusError as e:
+                if e.response.status_code == 429:
+                    print("\nSe alcanzó el límite diario de Google (100 búsquedas/día por defecto). "
+                          "Lo avanzado quedó guardado: vuelve a correr el mismo comando mañana "
+                          "y seguirá donde quedó.")
+                    break
                 sys.exit(f"Error de la API ({e.response.status_code}): {e.response.text}")
             llamadas += n
             nuevos = 0
@@ -123,8 +135,8 @@ def main() -> None:
                 direccion = p.get("formattedAddress", "")
                 categoria = p.get("primaryTypeDisplayName", {}).get("text", "")
                 if (p.get("businessStatus", "OPERATIONAL") != "OPERATIONAL"
-                        or FILTRO_REGION not in direccion or p["id"] in empresas
-                        or excluida(categoria)):
+                        or not any(u in direccion for u in FILTRO_UBICACION) or p["id"] in empresas
+                        or excluida(categoria, p.get("displayName", {}).get("text", ""))):
                     continue
                 empresas[p["id"]] = {
                     "place_id": p["id"],
@@ -142,6 +154,8 @@ def main() -> None:
                 }
                 nuevos += 1
             print(f"  {rubro} / {comuna}: {len(lugares)} resultados, {nuevos} nuevos")
+            with HECHAS.open("a", encoding="utf-8") as f:
+                f.write(f"{rubro} | {comuna}\n")
             guardar(empresas)  # guarda en cada paso: si se corta, no se pierde nada
 
     print(f"\nListo: {len(empresas) - antes} empresas nuevas, {len(empresas)} en total, "

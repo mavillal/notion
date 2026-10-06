@@ -31,39 +31,78 @@ RUBROS = [
 ]
 
 # Búsquedas por sector (se usan con: python paso1_descubrir.py --sectores).
-# Cada búsqueda es (rubro, lugar). La "oportunidad" se copia al Excel final.
+# Cada búsqueda es (rubro, [lugares]): se busca el rubro en cada lugar. La "oportunidad" se copia al Excel final.
 SECTORES = {
     "Logística": {
         "oportunidad": "Gestión de turnos, digitalización de hojas de ruta, SST por fatiga "
                        "de conductores y riesgos en bodegaje.",
         "busquedas": [
-            ("bodegas y almacenaje", "Valparaíso"),
-            ("bodegas y almacenaje", "Placilla, Valparaíso"),
-            ("centro de distribución", "Curauma, Valparaíso"),
-            ("servicios logísticos", "San Antonio"),
-            ("transporte de carga", "San Antonio"),
-            ("transporte de carga", "Concón"),
+            ("bodegas y almacenaje", ["Valparaíso", "Placilla, Valparaíso", "Curacaví"]),
+            ("centro de distribución", ["Curauma, Valparaíso", "Curacaví"]),
+            ("servicios logísticos", ["San Antonio", "Valparaíso", "Los Andes"]),
+            ("operador logístico", ["Valparaíso", "San Antonio", "Los Andes"]),
+            ("almacén extraportuario", ["Valparaíso", "San Antonio", "Placilla, Valparaíso"]),
+            ("depósito de contenedores", ["San Antonio", "Valparaíso"]),
+            ("transporte de carga", ["San Antonio", "Concón", "Los Andes", "Quillota",
+                                     "San Felipe", "Curacaví", "Casablanca"]),
+            ("transporte internacional de carga", ["Los Andes"]),
         ],
     },
     "Manufactura": {
         "oportunidad": "Automatización de reportes de planta, digitalización del layout, "
                        "auditoría de matrices de riesgo e implementación DS 44 / Ley Karin.",
         "busquedas": [
-            ("maquinaria industrial", "Viña del Mar"),
-            ("alimentos procesos", "Quilpué"),
-            ("alimentos procesos", "Villa Alemana"),
-            ("maestranza", "Concón"),
-            ("montajes industriales", "Región de Valparaíso"),
+            ("maquinaria industrial", ["Viña del Mar"]),
+            ("alimentos procesos", ["Quilpué", "Villa Alemana"]),
+            ("maestranza", ["Concón", "Valparaíso", "Viña del Mar", "San Antonio",
+                            "Quillota", "La Calera", "Los Andes", "San Felipe", "Curacaví"]),
+            ("montajes industriales", ["Región de Valparaíso"]),
+            ("empresa metalmecánica", ["Concón", "Quilpué", "Viña del Mar", "Valparaíso",
+                                       "Quillota", "Los Andes", "San Antonio"]),
+            ("estructuras metálicas", ["Quilpué", "Villa Alemana", "Quillota", "Curacaví",
+                                       "San Felipe"]),
+            ("planta industrial", ["Concón", "Quintero", "Puchuncaví", "La Calera", "Curacaví"]),
+            ("industria química", ["Concón", "Quintero"]),
+            ("fábrica de envases", ["Región de Valparaíso"]),
+            ("industria plástica", ["Región de Valparaíso"]),
+            ("planta de hormigón", ["La Calera", "Quillota", "Viña del Mar", "San Antonio"]),
+            ("fábrica de alimentos", ["Viña del Mar", "Valparaíso", "Quillota", "Curacaví",
+                                      "San Antonio"]),
+            ("planta procesadora de alimentos", ["Curacaví", "Casablanca", "Quillota"]),
         ],
     },
     "Agroindustria": {
         "oportunidad": "Control de contratistas, cumplimiento sanitario/SST en temporada "
                        "alta, digitalización de check-lists de calidad.",
         "busquedas": [
-            ("frigoríficos", "Quillota"),
-            ("empacadoras", "San Felipe"),
-            ("empacadoras", "Los Andes"),
-            ("viñas", "Casablanca"),
+            ("frigoríficos", ["Quillota"]),
+            ("empacadoras", ["San Felipe", "Los Andes"]),
+            ("viñas", ["Casablanca"]),
+            ("packing frutícola", ["Quillota", "La Cruz", "Hijuelas", "Nogales", "San Felipe",
+                                   "Los Andes", "Llay-Llay", "Curacaví", "Casablanca"]),
+            ("exportadora de fruta", ["San Felipe", "Los Andes", "Quillota", "Curacaví"]),
+            ("planta de frío", ["Quillota", "San Felipe", "Los Andes", "Curacaví"]),
+            ("procesadora de nueces", ["San Felipe", "Los Andes", "Curacaví"]),
+            ("planta deshidratadora", ["Región de Valparaíso", "Curacaví"]),
+            ("agroindustria", ["Curacaví", "Quillota", "San Felipe", "Los Andes"]),
+            ("planta avícola", ["Curacaví", "Región de Valparaíso"]),
+            ("viña", ["Valle de Leyda, San Antonio", "Curacaví", "Valle de Aconcagua"]),
+            ("vivero frutal", ["Quillota", "Curacaví"]),
+        ],
+    },
+    "Servicios industriales": {
+        "oportunidad": "Contratistas de minería, puertos y plantas: exigencias SST de "
+                       "mandantes (DS 44, Ley Karin, ISO 45001) y control de documentación.",
+        "busquedas": [
+            ("contratista minero", ["Los Andes", "San Felipe"]),
+            ("servicios a la minería", ["Los Andes", "Viña del Mar"]),
+            ("mantención industrial", ["Concón", "Quintero", "San Antonio", "Los Andes",
+                                       "Quillota"]),
+            ("servicios portuarios", ["San Antonio", "Valparaíso"]),
+            ("aseo industrial", ["Viña del Mar", "San Antonio", "Quillota"]),
+            ("montaje eléctrico industrial", ["Viña del Mar", "Quilpué", "Los Andes"]),
+            ("arriendo de maquinaria pesada", ["Quillota", "Los Andes", "San Antonio", "Curacaví"]),
+            ("empresa constructora industrial", ["Viña del Mar", "Concón"]),
         ],
     },
 }
@@ -75,10 +114,19 @@ CATEGORIAS_EXCLUIDAS = [
     "carnicería", "hotel", "camping", "centro comercial", "gran superficie",
     "ferretería", "atracción turística", "parque", "jardín", "jardiner", "condominio",
     "institución educativa", "recinto para eventos", "catering", "agencia de colocación",
+    "bancos y finanzas", "oficina de la administración", "oficina de gobierno",
+    "taller de automóviles", "concesionario", "taxi", "laboratorio de análisis", "hospital",
+    "mercado", "parada de autobús", "estación de carga", "farmacia", "agencia de viajes",
+    "gasolinera", "aparcamiento", "coworking", "mirador", "contabilidad", "gimnasio",
+    "iglesia", "asociación u organización",
 ]
 
-# Solo se guardan resultados cuya dirección contenga este texto.
-FILTRO_REGION = "Valparaíso"
+# Nombres que se descartan aunque la categoría pase el filtro.
+NOMBRES_EXCLUIDOS = ["aduana", "servicio nacional", "municipalidad"]
+
+# Solo se guardan resultados cuya dirección contenga alguno de estos textos.
+# (Curacaví es de la Región Metropolitana, pero es parte de la zona objetivo.)
+FILTRO_UBICACION = ["Valparaíso", "Curacaví"]
 
 # Rectángulo aproximado de la V Región continental (limita la búsqueda).
 ZONA = {
