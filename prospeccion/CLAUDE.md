@@ -15,3 +15,7 @@ comentarios en español.
   robots.txt; guardar solo emails corporativos genéricos (Ley 21.719); nunca commitear `.env`
   ni `data/`.
 - Antes de commitear, correr `pytest -q`.
+- Resultados en Drive: hoja "Prospectos V Región + Curacaví" (carpeta Scraper). Actualizar
+  siempre ese mismo archivo, nunca crear otro. El usuario la edita a mano: leerla completa antes
+  de escribir y agregar solo filas nuevas (deduplicar por el cid de `maps_url`), respetando sus
+  columnas, notas y filas borradas.
