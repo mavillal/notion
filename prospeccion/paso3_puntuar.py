@@ -45,7 +45,7 @@ GANCHOS = {  # preguntas de apertura (la web no prueba que no lo tengan: pregunt
 }
 
 COLUMNAS = ["puntaje", "sector", "servicio_sugerido", "gancho", "oportunidad_sector", "nombre", "categoria_maps",
-            "comuna_busqueda", "direccion", "telefono", "emails", "web", "n_resenas",
+            "comuna_busqueda", "direccion", "telefono", "emails", "web", "linkedin", "n_resenas",
             "rating", "brechas", "senales", "paginas_visitadas", "maps_url"]
 
 
@@ -62,6 +62,7 @@ def evaluar(empresa: dict, paginas: list[dict]) -> dict:
     inicio = next((p for p in ok if p["tipo"] == "inicio"), None)
     senales = sorted({s for p in ok for s in p["senales"]})
     emails = sorted({e for p in ok for e in p["emails"]})
+    linkedin = sorted({l for p in ok for l in p.get("linkedin", [])})
     tiene = set(senales).__contains__
 
     puntos: dict[str, int] = {}
@@ -98,6 +99,7 @@ def evaluar(empresa: dict, paginas: list[dict]) -> dict:
         "servicio_sugerido": servicio,
         "gancho": gancho,
         "emails": ", ".join(emails),
+        "linkedin": ", ".join(linkedin),
         "brechas": ", ".join(brechas),
         "senales": ", ".join(senales),
         "paginas_visitadas": len(ok),

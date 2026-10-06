@@ -17,3 +17,11 @@ def test_detecta_senales():
 def test_links_mismo_dominio():
     html = '<a href="/contacto">Contacto</a><a href="https://otro.cl/contacto">x</a><a href="/blog">Blog</a>'
     assert links_interesantes(html, "https://www.empresa.cl/", 5) == ["https://www.empresa.cl/contacto"]
+
+
+def test_linkedin_solo_empresa():
+    html = """<a href="https://cl.linkedin.com/company/Maestranza-X/">in</a>
+    <a href="https://www.linkedin.com/in/juan-perez">perfil</a>
+    <a href="https://www.linkedin.com/company/maestranza-x?trk=1">dup</a>"""
+    r = analizar_pagina(html, "https://x.cl")
+    assert r["linkedin"] == ["https://www.linkedin.com/company/maestranza-x"]
