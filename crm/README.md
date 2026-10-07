@@ -50,3 +50,15 @@ python3 scripts/build_exponor.py exponor_2026.csv CRM_Directorio_SSO_2026.xlsx C
 ```
 python3 scripts/build_aquasur.py aquasur.csv CRM_Directorio_SSO_2026.xlsx CRM_ExpoMina_2026.xlsx CRM_Exponor_2026.xlsx CRM_AquaSur_2026.xlsx
 ```
+
+# CRM – FIDAE 2026 (Santiago, Chile)
+
+`CRM_FIDAE_2026.xlsx`: 427 empresas/instituciones únicas (449 registros; sub-unidades de Carabineros, FACh y PDI agrupadas). Columnas extra: Segmento SafetyMind, Stand(s), N° stands, Rubro FIDAE, Web, Teléfono(s), Cruce otros CRM.
+
+- Prioridad: Alta 83 (operadores aéreos/MRO/industria, partners tecnológicos de sensores-drones-satélite-comunicaciones, capacitación) · Media 112 (OEM aeronáuticos, EPP/táctico, seguridad, salud, FF.AA./policías/DGAC, gremios) · Baja 232 (proveedores de defensa).
+- Cruce: 11 empresas también en otros CRM (Exponor, AquaSur, ExpoMina).
+- Copia viva en Google Drive (carpeta CRM): `CRM_FIDAE_2026`.
+
+```
+python3 scripts/build_fidae.py fidae.csv CRM_Directorio_SSO_2026.xlsx CRM_ExpoMina_2026.xlsx CRM_Exponor_2026.xlsx CRM_AquaSur_2026.xlsx CRM_FIDAE_2026.xlsx
+```
