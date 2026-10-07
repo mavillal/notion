@@ -75,3 +75,15 @@ python3 scripts/build_fidae.py fidae.csv CRM_Directorio_SSO_2026.xlsx CRM_ExpoMi
 ```
 python3 scripts/build_sanjuan.py sj.csv CRM_Directorio_SSO_2026.xlsx CRM_ExpoMina_2026.xlsx CRM_Exponor_2026.xlsx CRM_AquaSur_2026.xlsx CRM_FIDAE_2026.xlsx CRM_ExpoSanJuan_2026.xlsx
 ```
+
+# CRM – Conferencistas Minería 5.0 2026 (Encuentro de Metalurgia, Perú)
+
+`CRM_Mineria50_2026.xlsx`: 34 personas de 25 organizaciones. Salen de 27 filas del listado de conferencistas: las presentaciones conjuntas se separaron en un contacto por persona. Columnas extra: Segmento SafetyMind, Bloque temático, Tipo presentación, Ponencia, Co-presentadores, Verificación LinkedIn, Cruce otros CRM. La hoja `Log depuración` registra cada corrección: nombre y organización invertidos, organización mal asignada, título truncado y mayúsculas normalizadas.
+
+- Prioridad: Alta 13 (12 ejecutivos de mineras —El Brocal, Marcobre, CMH, Poderosa, Alpayana, Hudbay, Lincuna, Sibanye-Stillwater, Hot Chili— y 1 posible competidor: New Project Perú) · Media 18 (tecnología, OEM, consultoría, academia) · Baja 3.
+- LinkedIn: 18 contactos tienen perfil; en las presentaciones conjuntas el perfil solo se asigna al primer participante. 3 perfiles quedan por verificar porque el identificador es genérico.
+- Copia viva en Google Drive (carpeta CRM): `CRM_Mineria50_Conferencistas_2026`.
+
+```
+python3 scripts/build_mineria50.py conferencistas.csv CRM_Directorio_SSO_2026.xlsx CRM_ExpoMina_2026.xlsx CRM_Exponor_2026.xlsx CRM_AquaSur_2026.xlsx CRM_FIDAE_2026.xlsx CRM_ExpoSanJuan_2026.xlsx CRM_Mineria50_2026.xlsx
+```
