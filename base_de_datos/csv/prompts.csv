@@ -1,0 +1,23 @@
+﻿titulo,herramienta,autor,fecha,categoria,prompt
+Mapa de riesgos industrial (vista superior),Gemini,+51 ···445,2026-09-24,Mapa de riesgos,"Diseña un mapa de riesgos en vista superior para una planta industrial con taller de mantenimiento. Usa un estilo de plano vectorial, limpio y profesional, en formato horizontal A3.
+
+Distribuye y rotula cinco áreas: Oficinas, Almacén, Taller de equipos, Planta de proceso y Patio de maniobras. Dibuja pasillos, accesos, una salida, flechas verdes de evacuación y un punto de reunión exterior.
+
+Coloca marcadores numerados junto a estos peligros: R1 atrapamiento en partes móviles; R2 exposición a ruido; R3 cargas suspendidas y tránsito de equipos; R4 manipulación de materiales; R5 tablero eléctrico; R6 riesgo ergonómico. Incluye una leyenda lateral que relacione cada marcador con su peligro.
+
+Usa rojo, ámbar y azul para diferenciar niveles de riesgo solo de manera ilustrativa. Deja espacio para título, fecha, versión, responsable y aprobación SSOMA. Añade al pie: “Ejemplo referencial. Validar ubicaciones, rutas y niveles de riesgo con el layout real y el IPERC vigente”.
+
+Prioriza la legibilidad: líneas nítidas, rótulos grandes, símbolos consistentes y fondo claro. No agregues equipos, salidas ni controles que no estén indicados en este prompt."
+Infografía dibujada a mano en cuaderno,Gemini / generador de imágenes,@jjosecornejo,2026-10-04,Infografía,"Aquí va: «Genera una única imagen de una infografía física dibujada a mano en una página de un 
+cuaderno (página de color blanco uniforme, como hoja bond). Instrucciones de estilo: 
+Formato: La imagen debe parecer una fotografía de una infografía dibujada a mano en una 
+página de un cuaderno (página de color blanco uniforme, como hoja bond). Textura: Todos 
+los elementos deben parecer creados a mano con rotuladores de colores (negro, azul, 
+rojo, verde) y marcadores fluorescentes (amarillo, naranja, rosa). Las líneas deben ser con 
+textura visible de la tinta. Sin tipografías digitales: El texto, los encabezados y los puntos 
+deben estar escritos o rotulados a mano con rotuladores, evitando cualquier fuente 
+digital. Diseño: La imagen debe tener una resolución de 1080x1350. Utiliza rotuladores y 
+bolígrafos de varios colores para resaltar. Mantén el texto grande y legible. Añade un 
+diseño limpio pero dinámico, con diagramas, iconos y puntos clave. Adicional: Incluye el 
+texto manuscrito “[Elaborado por: José Cornejo Zúñiga]” en la parte inferior, con el mismo 
+estilo dibujado a mano»"

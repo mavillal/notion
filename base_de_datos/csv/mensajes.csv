@@ -1,0 +1,225 @@
+﻿id,fecha,hora,autor,es_admin,tipo,texto,url,plataforma,es_pregunta
+1,2026-09-21,23:11,@jjosecornejo,1,Texto,Hola! Bienvenido a los nuevos miembros de la comunidad ✌🏻,,,0
+2,2026-09-21,23:11,@jjosecornejo,1,Texto,"Hoy quiero compartirles un video que no es mío, pero que me pareció una buena idea",,,0
+3,2026-09-21,23:12,@jjosecornejo,1,Texto,"Varios aquí ya tienen alguna idea de cómo crear apps, asistentes IA, entre otros recursos",,,0
+4,2026-09-21,23:12,@jjosecornejo,1,Enlace,[Reenviado] https://www.instagram.com/p/DbmJZDpgiAC/?stkn=MTQxbnozNWR0MHJnMA==,https://www.instagram.com/p/DbmJZDpgiAC/?stkn=MTQxbnozNWR0MHJnMA==,Instagram,1
+5,2026-09-21,23:13,@jjosecornejo,1,Texto,"Antonio me compartió este video, y me pareció una súper idea, extrapolable.",,,0
+6,2026-09-21,23:15,@jjosecornejo,1,Texto,"Alguien creó un asistente de IA para pacientes… tal que mientras esperan ser atendidos en una cita médica van aprendiendo temas asociados a su cita médica, y así le hacen mejores preguntas a los doctores (y aprovechan mejor su consulta).",,,1
+7,2026-09-21,23:16,@jjosecornejo,1,Texto,"Me quedé pensando… en SST, qué tiempos de espera hay que sean aprovechables de manera similar?",,,1
+8,2026-09-21,23:17,@jjosecornejo,1,Texto,"- Ingreso de proveedores / contratistas (en algunas empresas hay tiempos de espera mientras se validan X cosas). 
+- ⁠Cuando los trabajadores pasan EMOs.",,,0
+9,2026-09-21,23:17,@jjosecornejo,1,Texto,En fin… ustedes seguro tienen mejores ejemplos ✌🏻,,,0
+10,2026-09-21,23:18,@jjosecornejo,1,Texto,A veces ahí está la oportunidad de hacer algo diferente 😉,,,0
+11,2026-09-23,08:44,Americo,0,Eliminado,"Un admin., @jjosecornejo, eliminó este mensaje.",,,0
+12,2026-09-23,11:52,+51 ···869,0,Texto,Hola amigos y colegas. ¿Ya usaron adobe podcast?,,,1
+13,2026-09-23,11:52,+51 ···869,0,Imagen,,,,0
+14,2026-09-23,11:52,+51 ···869,0,Texto,"Yo lo uso todo el tiempo, y me sirve mucho para mejorar el audio de mis capacitaciones audiovisuales",,,0
+15,2026-09-23,11:52,@MaginVB,0,Texto,ahh por eso sonabas tan bien,,,0
+16,2026-09-23,11:52,@MaginVB,0,Sticker,,,,0
+17,2026-09-23,11:54,+51 ···869,0,Texto,"En tiktok es directamente el micrófono, pero para clientes sí es siempre con audio mejorado (otra cosita 😁)",,,0
+18,2026-09-23,12:02,@jjosecornejo,1,Enlace,https://vt.tiktok.com/ZSbJnXEvE/,https://vt.tiktok.com/ZSbJnXEvE/,TikTok,0
+19,2026-09-23,12:04,@jjosecornejo,1,Texto,Este audio fue mejorado con Adobe Podcast Pd. Esa app efectivamente la hice echado en la cama 😁,,,0
+20,2026-09-23,12:31,@jjosecornejo,1,Imagen,"Para los que están en Lima, alguno estará o irá a la cumbre de Perú Sostenible que se dará en Magdalena?",,,1
+21,2026-09-23,12:32,@jjosecornejo,1,Enlace,https://cumbre.perusostenible.org/,https://cumbre.perusostenible.org/,Perú Sostenible,0
+22,2026-09-23,12:32,@jjosecornejo,1,Texto,Pensaba darme una vuelta para obtener un poco de inspiración.,,,0
+23,2026-09-23,12:33,@jjosecornejo,1,Texto,"Si alguien se apunta a alguno de los días me avisa, y nos vemos allá ✌🏻",,,0
+24,2026-09-24,03:49,+51 ···585,0,Sticker,,,,0
+25,2026-09-24,17:11,@jjosecornejo,1,Texto,"Hola! Les cuento que he estado trabajando bastante (como ustedes jaja), y que hoy me tocó usar una herramienta de IA súper poderosa.",,,0
+26,2026-09-24,17:11,@jjosecornejo,1,Texto,"hace tiempo que no la menciono en mis cursos, así que la cuento por aquí:",,,0
+27,2026-09-24,17:12,@jjosecornejo,1,Texto,Riverside transcription,,,0
+28,2026-09-24,17:13,@jjosecornejo,1,Imagen,,,,0
+29,2026-09-24,17:14,@jjosecornejo,1,Texto,"Si alguna vez tienen un video y quieren la transcripción del audio para utilizarlo como conocimiento de la IA, esta es la opción ✌🏻",,,0
+30,2026-09-24,17:14,+51 ···871,0,Texto,"Hola alguna plataforma interactiva que realice diapositivas, enviandole el PDF?",,,1
+31,2026-09-24,17:15,+51 ···146,0,Texto,Gemini Notebook Lm,,,0
+32,2026-09-24,17:16,@jjosecornejo,1,Texto,"Pensé en lo mismo, pero si lo que quiere es una presentación interactiva la solución no es tan inmediata. En ese caso funciona Genially.",,,0
+33,2026-09-24,17:16,+51 ···871,0,Texto,graciassssssss,,,0
+34,2026-09-24,23:16,+51 ···775,0,Texto,"Buena noche, pudieran indicarme con que IA puedo generar un layout para mapa de riesgo",,,1
+35,2026-09-24,23:34,+51 ···571,0,Texto,depende de si necesitas un plano físico/arquitectónico con señalizaciones o una matriz gráfica de probabilidad e impacto.,,,0
+36,2026-09-24,23:43,+51 ···775,0,Texto,Un arquitectónico con señalizaciones,,,0
+37,2026-09-24,23:46,+51 ···571,0,Texto,"Floorplanner / Planner 5D + Canva
+Solo que tienes que poner manualmente las señalizaciones",,,0
+38,2026-09-24,23:48,@RonaldAngo,0,Texto,No sería mejor con un Autocad sencillo?,,,1
+39,2026-09-24,23:50,+52 ···093,0,Texto,Alguna para aprender a programar?,,,1
+40,2026-09-24,23:51,+51 ···571,0,Texto,Depende de para qué se use el mapa.,,,0
+41,2026-09-24,23:52,+51 ···571,0,Texto,Yo uso la aplicación sideMe,,,0
+42,2026-09-24,23:52,+51 ···775,0,Texto,Tienes el promt,,,0
+43,2026-09-24,23:52,+51 ···571,0,Texto,Me ayuda en lo básico para poder tener una buena lógica de programación,,,0
+44,2026-09-24,23:52,+52 ···093,0,Texto,Vale! Muchas gracias,,,0
+45,2026-09-24,23:55,+51 ···445,0,Imagen,,,,0
+46,2026-09-24,23:55,+51 ···445,0,Texto,lo hice con gemini,,,0
+47,2026-09-24,23:55,+51 ···445,0,Texto,ahi esta el promt,,,0
+48,2026-09-24,23:55,+51 ···445,0,Texto,"Diseña un mapa de riesgos en vista superior para una planta industrial con taller de mantenimiento. Usa un estilo de plano vectorial, limpio y profesional, en formato horizontal A3.
+
+Distribuye y rotula cinco áreas: Oficinas, Almacén, Taller de equipos, Planta de proceso y Patio de maniobras. Dibuja pasillos, accesos, una salida, flechas verdes de evacuación y un punto de reunión exterior.
+
+Coloca marcadores numerados junto a estos peligros: R1 atrapamiento en partes móviles; R2 exposición a ruido; R3 cargas suspendidas y tránsito de equipos; R4 manipulación de materiales; R5 tablero eléctrico; R6 riesgo ergonómico. Incluye una leyenda lateral que relacione cada marcador con su peligro.
+
+Usa rojo, ámbar y azul para diferenciar niveles de riesgo solo de manera ilustrativa. Deja espacio para título, fecha, versión, responsable y aprobación SSOMA. Añade al pie: “Ejemplo referencial. Validar ubicaciones, rutas y niveles de riesgo con el layout real y el IPERC vigente”.
+
+Prioriza la legibilidad: líneas nítidas, rótulos grandes, símbolos consistentes y fondo claro. No agregues equipos, salidas ni controles que no estén indicados en este prompt.",,,0
+49,2026-09-24,23:57,+51 ···775,0,Texto,Gracias,,,0
+50,2026-09-25,11:41,+593 ···950,0,Texto,y los riesgos psicosociales como los ubicarias,,,0
+51,2026-09-25,16:58,+51 ···871,0,Eliminado,Se eliminó este mensaje.,,,0
+52,2026-09-25,21:59,@jjosecornejo,1,Texto,"Hola amiguitos, ¿cómo están? He estado trabajando bastante el día de hoy, de hecho toda la semana, pero hoy sale video, sí o sí sale video. Un poco tarde pero ahí sale algo. Les mando un abrazo, estamos conversando",,,1
+53,2026-09-25,22:01,@jjosecornejo,1,Texto,"Qué buena conversa se han dado! Me da mucho gusto. De hecho, para eso es este grupo, así que si tienen preguntas ahí entre ustedes se preguntan y entre ustedes también se responden ✌🏻",,,0
+54,2026-09-25,22:01,Americo,0,Texto,Chatgpt lánzale una idea y le pide una mejora,,,0
+55,2026-09-25,22:33,@karlaoroscoch,0,Documento,Libro Estrategia de productos y precios.pdf,,,0
+56,2026-09-26,00:24,@jjosecornejo,1,Enlace,https://vt.tiktok.com/ZSbFjVEPY/,https://vt.tiktok.com/ZSbFjVEPY/,TikTok,0
+57,2026-09-26,00:24,@jjosecornejo,1,Texto,Hay nuevo video. Me dicen si les gustó el personaje 😁✌🏻,,,0
+58,2026-09-26,00:29,+51 ···217,0,Texto,"Buena, gemini pro creo que da vídeo de 10 seg",,,0
+59,2026-09-26,00:33,@LuchitoVillalobos,0,Texto,alguna app ia que recomienden para hacer ppt,,,1
+60,2026-09-26,00:46,+51 ···445,0,Texto,"Yo uso Kimi K3 IA china , en mi opinión es excelente",,,0
+61,2026-09-26,01:39,@LuchitoVillalobos,0,Texto,Manejas algún prompt,,,0
+62,2026-09-26,01:43,+51 ···445,0,Texto,Depende que tema vas a realizar,,,0
+63,2026-09-26,01:44,@LuchitoVillalobos,0,Texto,Es chatgpt chino,,,0
+64,2026-09-26,01:44,@LuchitoVillalobos,0,Texto,Cierto?,,,1
+65,2026-09-26,01:44,+51 ···445,0,Texto,Si,,,0
+66,2026-09-26,01:45,+51 ···445,0,Texto,Que tema necesitas,,,0
+67,2026-09-26,04:51,@BryanMR18,0,Texto,el free o pagas? cuando intento usarlo ame sale un anuncio y no permite =S,,,1
+68,2026-09-26,14:19,@jjosecornejo,1,Enlace,https://vt.tiktok.com/ZSbYnx1T4/,https://vt.tiktok.com/ZSbYnx1T4/,TikTok,0
+69,2026-09-26,14:20,@jjosecornejo,1,Texto,"Hola! Varios me preguntaban si tengo curso para este mes. Sí… empieza el miércoles, sigue el viernes y termina el sábado (fecha presencial).",,,0
+70,2026-09-26,14:20,@jjosecornejo,1,Texto,"Así que, si quieren matricularse, me avisan y les mando la info por interno ✌🏻",,,0
+71,2026-09-26,14:21,@jjosecornejo,1,Texto,"Pd. Si tienes un amigo o colega y quieren recomendarles este curso, es el mejor regalo que le puedan dar hoy 😁",,,0
+72,2026-09-26,19:57,@jjosecornejo,1,Imagen,En el Perú Sostenible ✌🏻,,,0
+73,2026-09-26,20:00,@jjosecornejo,1,Imagen,,,,0
+74,2026-09-26,20:01,@jjosecornejo,1,Imagen,,,,0
+75,2026-09-27,21:27,@jjosecornejo,1,Enlace,https://vt.tiktok.com/ZSb6qmdWN/,https://vt.tiktok.com/ZSb6qmdWN/,TikTok,0
+76,2026-09-27,21:27,@jjosecornejo,1,Texto,El último video ✌🏻,,,0
+77,2026-09-27,21:27,@jjosecornejo,1,Texto,Recién salido,,,0
+78,2026-09-28,15:09,@jjosecornejo,1,Enlace,https://vt.tiktok.com/ZSbrtVWoU/,https://vt.tiktok.com/ZSbrtVWoU/,TikTok,0
+79,2026-09-28,15:10,@jjosecornejo,1,Texto,Hola! Subí este video acerca de cómo hago ahora mis presentaciones.,,,0
+80,2026-09-28,15:12,@MaginVB,0,Sticker,,,,0
+81,2026-09-28,17:32,+51 ···692,0,Texto,"Buenas tardes, alguna información sobre diplomados en SST gratuitos por favor",,,1
+82,2026-09-28,17:34,@jjosecornejo,1,Texto,"Hola, aquí no damos diplomados. A veces organizamos talleres gratuitos, sobre todo cuando son nuevos lanzamientos.",,,0
+83,2026-09-28,17:35,@jjosecornejo,1,Texto,"Pero si tienen dudas acerca del uso de IA aplicada, aquí pueden preguntar ✌🏻",,,0
+84,2026-09-28,17:35,+51 ···692,0,Texto,Esta bien,,,0
+85,2026-09-28,17:45,+51 ···436,0,Texto,"Buenas tardes, con el permiso del administrador del Grupo--- Me presento.  Mi nombre es Raúl Rodriguez . trabajo en el área de Seguridad Industrial estoy desarrollando un aplicativo como tema de Tesis , en mejora del registro que son parte del sistema de Gestión SST .. como parte del trabajo solicitan validación por Juicio de experto, para ello Pido si en el grupo,  hubiera dos o tres profesionales titulados y colegiados con experiencia en desarrollos con IA.  Los cuales podrían usar el prototipo y luego de ello poder contestar una escuesta, dando su veredicto sobre la facilidad de uso, pertinencia del trabajo . y recomendaciones para la mejora. Agradecería mucho , si hubiera alguien que me pudiera ayudar.",,,1
+86,2026-09-28,17:50,+51 ···031,0,Texto,Claro que porsupuesto que desde luego que si,,,0
+87,2026-09-28,22:06,@jjosecornejo,1,Texto,@~RAÚL RODRIGUEZ te escribo al privado,,,0
+88,2026-09-28,23:17,+51 ···869,0,Imagen,Hola! Ya estoy dando accesos a los inscritos al curso intensivo de Creación de Apps para la SST que inicia el miércoles 😀,,,0
+89,2026-09-28,23:18,+51 ···869,0,Imagen,"Aquí la carátula del brochure del curso, con un guapo en la portada jajaja. Si alguien quiere info, se la envío por interno. Hasta mañana acepto inscripciones.",,,0
+90,2026-09-28,23:19,@MaginVB,0,Texto,La IA cada vez hace mejor edición de las fotografías,,,0
+91,2026-09-28,23:19,@MaginVB,0,Texto,Es Gemini o Gpt,,,0
+92,2026-09-28,23:19,@MaginVB,0,Texto,Jajajajajajajaja,,,0
+93,2026-09-28,23:20,@jjosecornejo,1,Texto,Jajaja YOmini,,,0
+94,2026-09-28,23:20,@MaginVB,0,Texto,Una IA china es jajajaja,,,0
+95,2026-09-30,01:45,@jjosecornejo,1,Texto,"Hola! Un poco tarde, pero ya lo ven luego",,,0
+96,2026-09-30,01:45,@jjosecornejo,1,Enlace,https://vt.tiktok.com/ZSbSXJCT6/,https://vt.tiktok.com/ZSbSXJCT6/,TikTok,0
+97,2026-09-30,01:47,@jjosecornejo,1,Texto,"1. Mañana iniciamos el curso de “Creación de Apps para la SST con IA” 
+2. ⁠Ya hay fecha nueva edición del workshop presencial de “IA generativa para tomadores de decisiones”",,,0
+98,2026-09-30,23:43,@jjosecornejo,1,Texto,Hola! Culminamos con éxito la primera sesión del curso intensivo de creación de apps para la SST,,,0
+99,2026-09-30,23:44,@jjosecornejo,1,Texto,"Como siempre, mejorando cada vez",,,0
+100,2026-09-30,23:45,@MaginVB,0,Texto,Este era el que tenía que llevar tons jajaja,,,0
+101,2026-09-30,23:45,@MaginVB,0,Sticker,,,,0
+102,2026-09-30,23:46,@jjosecornejo,1,Imagen,,,,0
+103,2026-09-30,23:46,+593 ···528,0,Texto,"Super buena la sesión de hoy; si me permiten, 100% recomendado el curso de José.. muy práctico e intuitivo toda la información. 
+
+Saludos desde Ecuador 🇪🇨",,,0
+104,2026-09-30,23:46,@jjosecornejo,1,Texto,“… que volver a llevar”,,,0
+105,2026-09-30,23:46,@MaginVB,0,Texto,Es que dijiste que este estaba mejor,,,0
+106,2026-09-30,23:46,@MaginVB,0,Sticker,,,,0
+107,2026-09-30,23:46,@jjosecornejo,1,Texto,Mil gracias Juan Pablo ✌🏻,,,0
+108,2026-09-30,23:48,+51 ···917,0,Texto,Esto se ve bueno,,,0
+109,2026-09-30,23:48,@jjosecornejo,1,Texto,La verdad es que sí… me salió muy bueno,,,0
+110,2026-10-01,17:45,@jjosecornejo,1,Imagen,Hola amigos! Hoy tocó sacar el audiovisual que llevo dentro e ir a hacer grabaciones para una capacitación ✌🏻,,,0
+111,2026-10-01,17:47,+51 ···638,0,Imagen,Lo máximo siempre. @~José.,,,0
+112,2026-10-01,17:48,+51 ···638,0,Texto,Recomendado Comunidad,,,0
+113,2026-10-02,09:49,Tú,0,Eliminado,"Un admin., @jjosecornejo, eliminó este mensaje.",,,0
+114,2026-10-02,09:49,Tú,0,Eliminado,"Un admin., @jjosecornejo, eliminó este mensaje.",,,0
+115,2026-10-02,09:57,+51 ···367,0,Texto,Todo bien hasta que veo viernes de 9 a 12,,,0
+116,2026-10-02,09:57,+51 ···367,0,Texto,😭😭😭,,,0
+117,2026-10-02,12:19,@jjosecornejo,1,Texto,"Hola amigos y colegas! 
+
+Para estar claros todos. Son bienvenidos a esta comunidad donde pueden preguntar y aportar con su conocimiento, pero hay algo que no está permitido. 
+
+- Subir publicaciones que promuevan la migración de personas de esta comunidad a otras. 
+⁠
+- ⁠Subir publicaciones de otros cursos parecidos a los que yo dicto sin escribirme por interno previamente. (Que por cierto, suelo no aceptar).
+
+Deseo que les vaya bien en sus propias iniciativas, que saquen muchos cursos a favor de la SST y sobre todo, que los difundan en sus propios canales de comunicación. 
+
+Lo había dejado al sentido común, y ese fue un error. Culpa mía. 
+
+Felizmente ya está claro.  
+
+José ✌🏻",,,0
+118,2026-10-02,19:15,@jjosecornejo,1,Enlace,https://vt.tiktok.com/ZSb5WBNkS/,https://vt.tiktok.com/ZSb5WBNkS/,TikTok,0
+119,2026-10-02,19:16,@jjosecornejo,1,Texto,Hola! Para los que quieren aprender a hacer videos con IA,,,0
+120,2026-10-02,22:39,+51 ···585,0,Sticker,,,,0
+121,2026-10-03,10:18,@jjosecornejo,1,Imagen,Hola! Camino a una nueva aventura,,,0
+122,2026-10-03,10:19,@jjosecornejo,1,Texto,Hoy más profesionales SST aprenderán a hacer Apps para optimizar su trabajo diario ✌🏻,,,0
+123,2026-10-03,10:20,@jjosecornejo,1,Texto,"Seguimos trabajando por cumplir la promesa: hacer de la seguridad un lugar más ágil, humano y creativo 😁",,,0
+124,2026-10-03,11:12,+58 ···721,0,Texto,"Hola estoy recién ingresando, y primera vez que escribo... Se nota una comunidad muy buena y ud muy profesional como líder. Gracias...  Pero tengo una duda y disculpen a todos, soy nuevo en el area de la tecnología, soy supervisor en el area de seguridad industrial estuve en Perú años y ahora estoy en mi pais. Que aplicaciónes, o que debo hacer para comenzar a introducirme en este mundo de la tecnología en la seguridad laboral?  Tengo cero experiencia en ésta área. Agradecería su respuesta",,,1
+125,2026-10-03,12:46,+51 ···973,0,Texto,"En Manpower nos encontramos en la búsqueda de dos posiciones estratégicas para nuestro cliente líder en el rubro de la construcción en el distrito del Callao.
+
+- Coordinador SSOMA
+- Supervisor SSOMA 
+
+Ambos perfiles con experiencia certificada en el puesto superior a los 3 años, con certificaciones en espacios confinados, trabajos en altura, izajes, trabajos en caliente, Seguridad y Salud e ISO.
+Titulados o Bachilleres de las carreras de Ingeniería Industrial, Ambiental o afines al cargo.
+
+De estar interesados remitir su CV por correo a karla.velasquez@manpowergroup.pe indicando su puesto de interés y mencionando sus pretensiones salariales.
+Gracias!",,,0
+126,2026-10-03,13:28,@jjosecornejo,1,Texto,Hola! Te respondo recién porque estoy en pleno taller,,,0
+127,2026-10-03,13:29,@jjosecornejo,1,Imagen,,,,0
+128,2026-10-03,13:30,@LuchitoVillalobos,0,Texto,Buena jose,,,0
+129,2026-10-03,15:29,@jjosecornejo,1,Imagen,,,,0
+130,2026-10-03,15:29,@jjosecornejo,1,Texto,La rompimos hoy!!!,,,0
+131,2026-10-03,15:30,@jjosecornejo,1,Imagen,,,,0
+132,2026-10-03,15:30,@jjosecornejo,1,Imagen,,,,0
+133,2026-10-03,15:30,@MaginVB,0,Texto,Lo máximo,,,0
+134,2026-10-03,15:35,+51 ···146,0,Texto,Buenazo chicos!,,,0
+135,2026-10-03,15:36,@jjosecornejo,1,Texto,"Estuvieron los amigos y amigas de Stracon, Grupo Efe, DJI (QTC), EO RS y por supuesto… yo jajaja",,,0
+136,2026-10-03,15:38,@jjosecornejo,1,Texto,"Muy enriquecedor, como siempre, el aprendizaje cruzado… el compartir de experiencias y cómo resuelven problemas similares desde sus distintas vivencias. Creo que esa parte es una de las que más disfruto 😀",,,0
+137,2026-10-03,16:32,+51 ···917,0,Texto,Eso necesito,,,0
+138,2026-10-03,21:18,@jjosecornejo,1,Enlace,https://www.linkedin.com/posts/jos%C3%A9-ricardo-cornejo-z%C3%BA%C3%B1iga-429959115_nueva-promoci%C3%B3n-de-profesionales-sst-que-ugcPost-7512303395550965761-OvH5/?highlightedUpdateUrn=urn:li:ugcPost:7512303395550965761&highlightedUpdateType=SOCIAL_SHARE&origin=SOCIAL_SHARE&utm_medium=ios_app&rcm=ACoAABzLkCEB7wzNjDyRBfM7TyEvE-FNRO_aEgc&utm_source=social_share_send&utm_campaign=whatsapp,https://www.linkedin.com/posts/jos%C3%A9-ricardo-cornejo-z%C3%BA%C3%B1iga-429959115_nueva-promoci%C3%B3n-de-profesionales-sst-que-ugcPost-7512303395550965761-OvH5/?highlightedUpdateUrn=urn:li:ugcPost:7512303395550965761&highlightedUpdateType=SOCIAL_SHARE&origin=SOCIAL_SHARE&utm_medium=ios_app&rcm=ACoAABzLkCEB7wzNjDyRBfM7TyEvE-FNRO_aEgc&utm_source=social_share_send&utm_campaign=whatsapp,LinkedIn,1
+139,2026-10-03,21:19,@jjosecornejo,1,Texto,"Hola amigos y colegas, por si quieren darle una mirada y dejar algo de cariño a mi última publicación de LinkedIn.",,,0
+140,2026-10-03,21:20,@jjosecornejo,1,Texto,Un pequeño recuento del curso de hoy y de lo que viene. Que es poderoso.,,,0
+141,2026-10-03,23:05,@jjosecornejo,1,Enlace,https://www.linkedin.com/posts/jos%C3%A9-ricardo-cornejo-z%C3%BA%C3%B1iga-429959115_nueva-promoci%C3%B3n-de-profesionales-sst-que-ugcPost-7512331001256374273-uBo6/?highlightedUpdateUrn=urn:li:activity:7512331002254589952&highlightedUpdateType=SOCIAL_SHARE&origin=SOCIAL_SHARE&utm_medium=ios_app&rcm=ACoAABzLkCEB7wzNjDyRBfM7TyEvE-FNRO_aEgc&utm_source=social_share_send&utm_campaign=whatsapp,https://www.linkedin.com/posts/jos%C3%A9-ricardo-cornejo-z%C3%BA%C3%B1iga-429959115_nueva-promoci%C3%B3n-de-profesionales-sst-que-ugcPost-7512331001256374273-uBo6/?highlightedUpdateUrn=urn:li:activity:7512331002254589952&highlightedUpdateType=SOCIAL_SHARE&origin=SOCIAL_SHARE&utm_medium=ios_app&rcm=ACoAABzLkCEB7wzNjDyRBfM7TyEvE-FNRO_aEgc&utm_source=social_share_send&utm_campaign=whatsapp,LinkedIn,1
+142,2026-10-03,23:06,@jjosecornejo,1,Texto,"Hola amigos, la volví a publicar con un breve cambio, aunque importante ✌🏻",,,0
+143,2026-10-04,16:21,@jjosecornejo,1,Eliminado,Se eliminó este mensaje.,,,0
+144,2026-10-04,16:21,@MaginVB,0,Sticker,,,,0
+145,2026-10-04,16:22,@jjosecornejo,1,Imagen,"¡Hola comunidad! 
+
+Acabo de cerrar mi almuerzo electoral. Tallarines verdes, chuleta y mi hija intentando robarse todo lo que había en la mesa.
+
+Almuerzo en familia: mi mejor elección 😁
+
+Feliz domingo. Voten con calma, coman rico y abracen a los suyos.
+
+Mañana seguimos con la IA 🔥",,,0
+146,2026-10-04,16:25,+57 ···073,0,Texto,"Hola José, buen provecho!!",,,0
+147,2026-10-04,17:35,+57 ···197,0,Texto,Buenas tardes alguien me puede pasar el prompt para infografias.,,,1
+148,2026-10-04,17:52,+51 ···568,0,Texto,Esperando el mensaje.… Esto puede demorar un poco.,,,0
+149,2026-10-04,17:53,+57 ···197,0,Texto,Que me haga el favor,,,0
+150,2026-10-04,17:53,@jjosecornejo,1,Texto,Ahorita lo paso,,,0
+151,2026-10-04,17:54,@jjosecornejo,1,Texto,"Aquí va: «Genera una única imagen de una infografía física dibujada a mano en una página de un 
+cuaderno (página de color blanco uniforme, como hoja bond). Instrucciones de estilo: 
+Formato: La imagen debe parecer una fotografía de una infografía dibujada a mano en una 
+página de un cuaderno (página de color blanco uniforme, como hoja bond). Textura: Todos 
+los elementos deben parecer creados a mano con rotuladores de colores (negro, azul, 
+rojo, verde) y marcadores fluorescentes (amarillo, naranja, rosa). Las líneas deben ser con 
+textura visible de la tinta. Sin tipografías digitales: El texto, los encabezados y los puntos 
+deben estar escritos o rotulados a mano con rotuladores, evitando cualquier fuente 
+digital. Diseño: La imagen debe tener una resolución de 1080x1350. Utiliza rotuladores y 
+bolígrafos de varios colores para resaltar. Mantén el texto grande y legible. Añade un 
+diseño limpio pero dinámico, con diagramas, iconos y puntos clave. Adicional: Incluye el 
+texto manuscrito “[Elaborado por: José Cornejo Zúñiga]” en la parte inferior, con el mismo 
+estilo dibujado a mano»",,,0
+152,2026-10-04,18:10,@fredysavath,0,Enlace,"Buenísima 
+
+https://share.gemini.google/YBtdhGLZM93S",https://share.gemini.google/YBtdhGLZM93S,Gemini,0
+153,2026-10-04,18:11,@jjosecornejo,1,Enlace,https://vt.tiktok.com/ZSb9X1fy1/,https://vt.tiktok.com/ZSb9X1fy1/,TikTok,0
+154,2026-10-04,18:11,@jjosecornejo,1,Texto,Les comparto el video para que sepan cómo hacerlas (no por nada tuvo cerca de 350 mil vistas).,,,0
+155,2026-10-04,18:12,@jjosecornejo,1,Imagen,Te quedó chévere.,,,0
+156,2026-10-05,22:40,@jjosecornejo,1,Texto,"Hola amigos, día largo. Hoy no se habla de IA jaja",,,0
+157,2026-10-05,22:41,@MaginVB,0,Sticker,,,,0
+158,2026-10-05,22:42,@jjosecornejo,1,Imagen,"Un recuerdo de mi historia de fb para no ser ignorado jaja. Nunca uso corbata, ni en mi matrimonio, pero un cliente lo pidió para una capacitación y me doblegó jjajaja no volverá a pasar 😀",,,0
+159,2026-10-05,22:42,@MaginVB,0,Texto,Jajajajajajajajajajajajaja,,,0
+160,2026-10-05,22:43,@MaginVB,0,Texto,Con corbata ya no hay cuello,,,0
+161,2026-10-05,22:43,@MaginVB,0,Texto,No hay forma,,,0
+162,2026-10-05,22:55,+51 ···917,0,Texto,Jajjajaja te doblegó,,,0
+163,2026-10-05,23:18,@jjosecornejo,1,Texto,"Jajaja repito, no volverá a suceder ✌🏻",,,0
+164,2026-10-05,23:27,@LuchitoVillalobos,0,Sticker,,,,0
+165,2026-10-06,20:10,@jjosecornejo,1,Eliminado,Se eliminó este mensaje.,,,0
+166,2026-10-06,20:11,@jjosecornejo,1,Enlace,https://www.linkedin.com/posts/jos%C3%A9-ricardo-cornejo-z%C3%BA%C3%B1iga-429959115_olv%C3%ADdate-de-las-diapositivas-qu%C3%ADtalas-de-share-7513374992072568833-ap_B/?highlightedUpdateUrn=urn:li:activity:7513374993733304320&highlightedUpdateType=SOCIAL_SHARE&origin=SOCIAL_SHARE&utm_medium=ios_app&rcm=ACoAABzLkCEB7wzNjDyRBfM7TyEvE-FNRO_aEgc&utm_source=social_share_send&utm_campaign=whatsapp,https://www.linkedin.com/posts/jos%C3%A9-ricardo-cornejo-z%C3%BA%C3%B1iga-429959115_olv%C3%ADdate-de-las-diapositivas-qu%C3%ADtalas-de-share-7513374992072568833-ap_B/?highlightedUpdateUrn=urn:li:activity:7513374993733304320&highlightedUpdateType=SOCIAL_SHARE&origin=SOCIAL_SHARE&utm_medium=ios_app&rcm=ACoAABzLkCEB7wzNjDyRBfM7TyEvE-FNRO_aEgc&utm_source=social_share_send&utm_campaign=whatsapp,LinkedIn,1
