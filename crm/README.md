@@ -62,3 +62,16 @@ python3 scripts/build_aquasur.py aquasur.csv CRM_Directorio_SSO_2026.xlsx CRM_Ex
 ```
 python3 scripts/build_fidae.py fidae.csv CRM_Directorio_SSO_2026.xlsx CRM_ExpoMina_2026.xlsx CRM_Exponor_2026.xlsx CRM_AquaSur_2026.xlsx CRM_FIDAE_2026.xlsx
 ```
+
+# CRM – Expo San Juan Minera 2026 (San Juan, Argentina)
+
+`CRM_ExpoSanJuan_2026.xlsx`: 426 empresas/instituciones únicas. Columnas extra: Segmento SafetyMind, Stand(s), Ubicación (pabellón/exterior), Agrupación (cámara, clúster o delegación), Razón social, Descripción, Web, Cruce otros CRM. El listado trae email para 289 empresas (sin nombre de contacto).
+
+- Prioridad: Alta 108 (16 mineras/energía: Veladero, Vicuña, Los Azules, El Pachón, Casposo, YPF…; 56 contratistas de operación, perforación, voladura, transporte y campamentos; 24 partners tecnológicos —incluye TCV, competidor directo en fatiga con IA—; 12 consultoría/capacitación) · Media 95 (OEM, EPP, seguridad, salud, cámaras/medios/gobierno) · Baja 223 (proveedores industriales y 21 fuera de foco).
+- País: delegación/pabellón cuando existe; si no, Argentina.
+- Cruce: 52 empresas también en otros CRM (Exponor, ExpoMina, Directorio SSO, AquaSur, FIDAE).
+- Copia viva en Google Drive (carpeta CRM): `CRM_ExpoSanJuan_2026` (descripción resumida solo para Alta/Media; el Excel trae todo).
+
+```
+python3 scripts/build_sanjuan.py sj.csv CRM_Directorio_SSO_2026.xlsx CRM_ExpoMina_2026.xlsx CRM_Exponor_2026.xlsx CRM_AquaSur_2026.xlsx CRM_FIDAE_2026.xlsx CRM_ExpoSanJuan_2026.xlsx
+```
