@@ -1,9 +1,10 @@
 """Genera la base de datos de la comunidad LegadoSostenible a partir del export de WhatsApp.
 
-Uso:  python3 generar_bd.py <chat.txt>
+Uso:  python3 generar_bd.py <chat.txt> [--completo <carpeta_salida>]
 Salida: comunidad.db (SQLite) + un CSV por tabla en ./csv (importables en Notion).
 
 Los teléfonos se enmascaran (código de país + últimos 3 dígitos) para no publicar datos personales.
+--completo conserva los números completos; úsalo con una carpeta fuera del repo.
 """
 import csv
 import re
@@ -14,6 +15,7 @@ from datetime import datetime
 from pathlib import Path
 
 OUT = Path(__file__).parent
+COMPLETO = False
 ADMIN = "@jjosecornejo"
 
 PAISES = {
@@ -28,6 +30,8 @@ URL = re.compile(r"https?://\S+")
 
 
 def mask(tel):
+    if COMPLETO:
+        return tel
     digits = re.sub(r"\D", "", tel)
     code = next((c for c in sorted(PAISES, key=len, reverse=True) if digits.startswith(c[1:])), "+" + digits[:2])
     return f"{code} ···{digits[-3:]}"
@@ -189,6 +193,20 @@ def main(src):
                        for m in filas_msg if m["url"]],
     }
 
+    if COMPLETO:  # las tablas curadas usan alias enmascarados: se restauran al número completo
+        texto = Path(src).read_text(encoding="utf-8")
+        completos = {}
+        for t in TEL.findall(texto):
+            globals()["COMPLETO"] = False
+            completos[mask(t)] = t
+            globals()["COMPLETO"] = True
+        patron = re.compile("|".join(re.escape(k) for k in completos))
+        for filas in tablas.values():
+            for f in filas:
+                for k, v in f.items():
+                    if isinstance(v, str):
+                        f[k] = patron.sub(lambda m: completos[m.group()], v)
+
     db_path = OUT / "comunidad.db"
     db_path.unlink(missing_ok=True)
     con = sqlite3.connect(db_path)
@@ -207,4 +225,8 @@ def main(src):
 
 
 if __name__ == "__main__":
+    if "--completo" in sys.argv:
+        COMPLETO = True
+        OUT = Path(sys.argv[sys.argv.index("--completo") + 1])
+        OUT.mkdir(parents=True, exist_ok=True)
     main(sys.argv[1])
