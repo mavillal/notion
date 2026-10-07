@@ -38,3 +38,15 @@ python3 scripts/build_expo.py expomina_exhibidores.csv CRM_Directorio_SSO_2026.x
 ```
 python3 scripts/build_exponor.py exponor_2026.csv CRM_Directorio_SSO_2026.xlsx CRM_ExpoMina_2026.xlsx CRM_Exponor_2026.xlsx
 ```
+
+# CRM – AquaSur 2026 (Puerto Montt, Chile)
+
+`CRM_AquaSur_2026.xlsx`: 517 empresas únicas (528 registros del listado de expositores). Columnas extra: Segmento SafetyMind, Stand(s), N° stands, Rubro AquaSur, Descripción, Teléfono(s), Cruce otros CRM.
+
+- Prioridad: Alta 100 · Media 81 · Baja 336. La segmentación usa una lista curada a partir de nombre y descripción, porque el giro del listado viene mal asignado en muchos casos.
+- Cruce: 55 también en Exponor, 8 en ExpoMina y 3 en el Directorio SSO.
+- Copia viva en Google Drive (carpeta CRM): `CRM_AquaSur_2026` (descripciones solo para Alta/Media; el Excel las trae todas).
+
+```
+python3 scripts/build_aquasur.py aquasur.csv CRM_Directorio_SSO_2026.xlsx CRM_ExpoMina_2026.xlsx CRM_Exponor_2026.xlsx CRM_AquaSur_2026.xlsx
+```
