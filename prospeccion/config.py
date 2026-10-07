@@ -118,7 +118,10 @@ CATEGORIAS_EXCLUIDAS = [
     "taller de automóviles", "concesionario", "taxi", "laboratorio de análisis", "hospital",
     "mercado", "parada de autobús", "estación de carga", "farmacia", "agencia de viajes",
     "gasolinera", "aparcamiento", "coworking", "mirador", "contabilidad", "gimnasio",
-    "iglesia", "asociación u organización",
+    "iglesia", "asociación u organización", "pastelería", "comida", "hamburguesería",
+    "baños públicos", "lugar de culto", "cementerio", "aeropuerto", "universidad",
+    "centro cultural", "estadio", "club deportivo", "inmobiliaria", "río",
+    "campamento", "centro comunitario", "guardería", "lavado de coches", "lavandería",
 ]
 
 # Nombres que se descartan aunque la categoría pase el filtro.
