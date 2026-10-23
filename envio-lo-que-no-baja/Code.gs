@@ -12,7 +12,7 @@
  */
 
 const CFG = {
-  SHEET_NAME: 'Contactos',            // pestaña del CRM; si no existe usa la activa
+  SHEET_NAME: 'Envio_LQNB',           // pestaña de envío; si no existe usa la activa
   SENDER_NAME: 'Mario Villalobos',
   REPLY_TO: '',                       // vacío = tu propio correo
   SUBJECT: 'Lo que no baja',
@@ -178,7 +178,7 @@ function deliver_(email, nombre, tanda) {
 
 function text_(first, url) {
   return (first ? 'Hola ' + first + ',' : 'Hola,') + '\n\n' +
-    'Te comparto esta publicación que podría ser de tu interés.\n\n' +
+    'Hace tiempo que no hablamos y quise compartirte esta publicación, que podría ser de tu interés.\n\n' +
     'Si quieres contrastar más datos, los dejé en este repositorio:\n' + url + '\n\n' +
     'Un saludo,\n' + CFG.SENDER_NAME + '\n\n' +
     'Si prefieres no recibir más mensajes míos, respóndeme "no" y no volveré a escribirte.';
@@ -203,7 +203,7 @@ function html_(first, url) {
 
     // Cuerpo
     '<tr><td style="font-family:' + font + ';font-size:16px;line-height:26px;color:#1F2933;padding:36px 0 0;">' + hi + '</td></tr>' +
-    '<tr><td style="font-family:' + font + ';font-size:16px;line-height:26px;color:#1F2933;padding:16px 0 0;">Te comparto esta publicación que podría ser de tu interés.</td></tr>' +
+    '<tr><td style="font-family:' + font + ';font-size:16px;line-height:26px;color:#1F2933;padding:16px 0 0;">Hace tiempo que no hablamos y quise compartirte esta publicación, que podría ser de tu interés.</td></tr>' +
     '<tr><td style="font-family:' + font + ';font-size:16px;line-height:26px;color:#1F2933;padding:16px 0 0;">Si quieres contrastar más datos, los dejé en este repositorio.</td></tr>' +
 
     // Botón
