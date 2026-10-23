@@ -114,6 +114,9 @@ function run_(filter) {
     if (filter.tanda && String(row[col.tanda]).trim() !== filter.tanda) continue;
     if (col.noContactar > -1 && String(row[col.noContactar]).trim() !== '') continue;
     if (!isEmail_(email)) { mark_(sh, col, rowNum, CFG.ST.error, 'Email inválido'); continue; }
+    if (/^(info|contacto|contact|hello|helpdesk|help|soporte|ventas|admin|noreply|no-reply|reclutamiento|rrhh|prensa)[.\-_@]/.test(email)) {
+      mark_(sh, col, rowNum, CFG.ST.error, 'Correo genérico'); continue;
+    }
     if (seen[email]) continue;
     seen[email] = true;
     queue.push({ rowNum: rowNum, email: email, nombre: row[col.nombre], tanda: String(row[col.tanda]).trim() });
